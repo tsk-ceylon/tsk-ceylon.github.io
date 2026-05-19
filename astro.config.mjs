@@ -11,5 +11,8 @@ export default defineConfig({
   base: PAGES_BASE,
   trailingSlash: 'ignore',
   integrations: [sitemap()],
-  vite: { plugins: [tailwindcss()] },
+  // JSDoc `any` cast: @tailwindcss/vite's plugin type skews against the Vite
+  // types bundled with this Astro version (ObjectHook/HotUpdatePluginContext).
+  // Runtime is fine (dev server verified); this only silences `astro check`.
+  vite: { plugins: [/** @type {any} */ (tailwindcss())] },
 });
