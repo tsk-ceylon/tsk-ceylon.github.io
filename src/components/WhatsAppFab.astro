@@ -1,0 +1,13 @@
+---
+import { site } from '../data/site';
+const href = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`;
+---
+<a
+  href={href}
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with us on WhatsApp"
+  class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 font-bold text-white shadow-lg hover:brightness-95 transition"
+>
+  <span aria-hidden="true">💬</span> WhatsApp
+</a>
