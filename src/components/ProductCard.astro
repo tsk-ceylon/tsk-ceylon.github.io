@@ -3,7 +3,7 @@ import type { Product } from '../data/types';
 interface Props { product: Product; }
 const { product } = Astro.props;
 ---
-<article class="rounded-lg border border-line bg-surface p-6 hover:border-action transition-colors">
+<article class="rounded-lg border border-line bg-surface p-6 shadow-card hover:border-action hover:shadow-card-hover transition-all duration-200">
   <h3 class="text-lg font-extrabold text-navy">{product.name}</h3>
   <p class="mt-2 text-sm text-muted">{product.description}</p>
   <dl class="mt-4 space-y-1 text-sm">

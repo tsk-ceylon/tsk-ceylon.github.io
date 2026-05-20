@@ -7,17 +7,23 @@
   --color-navy-soft: #1E3050;
   --color-ink: #1F2937;           /* body text */
   --color-muted: #475569;         /* secondary text */
-  --color-surface: #FFFFFF;       /* base surface */
-  --color-surface-alt: #F6F8FB;   /* section bands */
+  --color-page: #F4F7FA;          /* tinted page background (body) */
+  --color-surface: #FFFFFF;       /* cards + white bands that sit on the page */
+  --color-surface-alt: #EEF2F7;   /* deeper section bands */
   --color-line: #E5E7EB;          /* hairlines/borders */
 
   --font-sans: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Navy-tinted, two-layer shadows. Ambient (small/soft) + key (larger/offset).
+     Tune these to taste — lighter alpha = subtler, more alpha = "designed". */
+  --shadow-card:       0 1px 2px 0 rgb(20 33 61 / 0.04), 0 4px 12px -2px rgb(20 33 61 / 0.06);
+  --shadow-card-hover: 0 2px 4px 0 rgb(20 33 61 / 0.06), 0 12px 24px -4px rgb(20 33 61 / 0.10);
 }
 
 @layer base {
   html { scroll-behavior: smooth; }
   body {
-    background: var(--color-surface);
+    background: var(--color-page);
     color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
