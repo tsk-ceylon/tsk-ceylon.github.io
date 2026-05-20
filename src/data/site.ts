@@ -1,18 +1,18 @@
 import type { SiteConfig } from './types';
 
-// ─── PLACEHOLDERS — replace each marked value with SK Ceylon's real details ───
+// ─── PLACEHOLDERS — replace each marked value with TSK Ceylon's real details ───
 export const site: SiteConfig = {
-  name: 'SK Ceylon',
-  legalName: 'SK Ceylon (Pvt) Ltd', // PLACEHOLDER — legal entity name
+  name: 'TSK Ceylon',
+  legalName: 'TSK Ceylon (Pvt) Ltd', // PLACEHOLDER — legal entity name
   tagline: 'Certified Fire Extinguishers & Servicing in Sri Lanka',
   description:
-    'SK Ceylon supplies, installs and services certified fire extinguishers for offices, factories, hotels and homes across Sri Lanka. Request a quote today.',
-  url: 'https://skceylon.github.io',
+    'TSK Ceylon supplies, installs and services certified fire extinguishers for offices, factories, hotels and homes across Sri Lanka. Request a quote today.',
+  url: 'https://tskceylon.github.io',
   phoneDisplay: '+94 11 234 5678',          // PLACEHOLDER — real phone
   phoneHref: '+94112345678',                // PLACEHOLDER — tel: digits
   whatsappNumber: '94771234567',            // PLACEHOLDER — WhatsApp digits, no +
-  whatsappMessage: 'Hello SK Ceylon, I would like a quote for fire extinguishers.',
-  email: 'info@skceylon.lk',                // PLACEHOLDER — real email
+  whatsappMessage: 'Hello TSK Ceylon, I would like a quote for fire extinguishers.',
+  email: 'info@tskceylon.lk',               // PLACEHOLDER — real email
   address: {
     street: 'No. 1, Main Street',           // PLACEHOLDER
     city: 'Colombo',                        // PLACEHOLDER

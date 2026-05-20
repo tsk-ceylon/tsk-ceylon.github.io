@@ -4,9 +4,8 @@ const path = new URL(Astro.request.url).pathname.replace(/\/$/, '') || '/';
 ---
 <header class="border-b border-line bg-surface sticky top-0 z-40">
   <div class="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between gap-4">
-    <a href="/" class="flex items-center gap-2 font-extrabold text-navy text-lg tracking-tight">
-      <img src="/favicon.svg" alt="" width="28" height="28" />
-      {site.name}
+    <a href="/" class="flex items-center" aria-label={`${site.name} — home`}>
+      <img src="/logo.png" alt={site.name} width="49" height="48" class="h-12 w-auto" />
     </a>
     <nav aria-label="Primary" class="hidden md:flex items-center gap-6 text-sm font-semibold">
       {site.nav.map((item) => (

@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
-const SITE_URL = process.env.SITE_URL ?? 'https://skceylon.github.io';
+const SITE_URL = process.env.SITE_URL ?? 'https://tskceylon.github.io';
 const PAGES_BASE = process.env.PAGES_BASE ?? '/';
 
 export default defineConfig({
