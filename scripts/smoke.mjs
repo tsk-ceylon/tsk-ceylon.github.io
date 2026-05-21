@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { readFile, stat } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { site } from '../src/data/site.ts';
 
@@ -20,6 +20,19 @@ for (const p of pages) {
 const index = await readFile('dist/index.html', 'utf8');
 if (!index.includes(`wa.me/${site.whatsappNumber}`)) errors.push('index: WhatsApp link missing');
 if (!index.includes(`tel:${site.phoneHref}`)) errors.push('index: click-to-call missing');
+if (!index.includes('company-profile.pdf')) errors.push('index: company-profile PDF link missing');
+
+const pdfPath = 'dist/company-profile.pdf';
+if (!existsSync(pdfPath)) {
+  errors.push('company-profile.pdf missing from dist/ (run `npm run pdf` to rebuild)');
+} else {
+  const { size } = await stat(pdfPath);
+  if (size < 10_000) errors.push(`company-profile.pdf suspiciously small (${size} bytes)`);
+}
+
+const about = await readFile('dist/about/index.html', 'utf8');
+if (!about.includes('company-profile.pdf'))
+  errors.push('about: company-profile PDF link missing');
 
 if (errors.length) {
   console.error('SMOKE FAILED:\n' + errors.map((e) => ' - ' + e).join('\n'));

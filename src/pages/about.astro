@@ -18,5 +18,18 @@ import { site } from '../data/site';
       <p class="text-sm">Company details, certifications and history on this page are
         placeholders pending final content from TSK Ceylon.</p>
     </div>
+    <div class="mt-10 rounded-xl border border-line bg-surface p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 shadow-card">
+      <div>
+        <h2 class="text-xl font-extrabold text-navy">Download our company profile</h2>
+        <p class="mt-1 text-sm text-muted">An 11-page PDF — our story, products, services, and contact details.</p>
+      </div>
+      <a href="/company-profile.pdf" download
+         class="inline-flex items-center justify-center gap-2 rounded-md bg-action px-6 py-3 font-bold text-white hover:bg-action-dark transition-colors whitespace-nowrap">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+        Download PDF
+      </a>
+    </div>
   </section>
 </BaseLayout>

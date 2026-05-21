@@ -1,0 +1,247 @@
+// TSK Ceylon company-profile PDF — brand tokens + reusable helpers.
+// Colours align with src/styles/global.css so web + PDF stay consistent.
+
+#let navy = rgb("#14213D")
+#let navy-soft = rgb("#1E3050")
+#let red = rgb("#DC2626")
+#let red-dark = rgb("#B91C1C")
+#let ink = rgb("#1F2937")
+#let muted = rgb("#475569")
+#let surface = rgb("#FFFFFF")
+#let surface-alt = rgb("#EEF2F7")
+#let line-color = rgb("#E5E7EB")
+#let page-bg = rgb("#F4F7FA")
+
+// Marshalled at build time from src/data/site.ts by build.mjs.
+#let site = json("site.json")
+
+// ── Page chrome ──────────────────────────────────────────────────────────────
+
+#let page-header(num) = block(
+  width: 100%,
+  inset: (bottom: 8pt),
+  stroke: (bottom: 0.5pt + line-color),
+)[
+  #grid(
+    columns: (1fr, 1fr),
+    align: (left, right),
+    [
+      #text(size: 28pt, weight: 900, fill: navy)[#num]
+      #v(-0.5em)
+      #box(width: 22pt, height: 2pt, fill: red)
+      #v(0.1em)
+      #text(size: 8pt, weight: "bold", tracking: 2pt, fill: red-dark)[COMPANY PROFILE]
+    ],
+    align(right + horizon)[
+      #text(size: 18pt, weight: 900, fill: navy)[TSK]
+      #text(size: 18pt, weight: 900, fill: red)[ CEYLON]
+    ],
+  )
+]
+
+#let page-footer() = block(
+  fill: navy,
+  width: 100%,
+  inset: (x: 14pt, y: 10pt),
+  radius: 4pt,
+)[
+  #set text(size: 8.5pt, fill: white)
+  #grid(
+    columns: (1fr, auto),
+    align: (left, right),
+    [
+      *#site.legalName* — _Safety Today, Secure Tomorrow_
+    ],
+    [
+      #site.phoneDisplay
+      #h(8pt) · #h(8pt)
+      #site.email
+    ],
+  )
+  #v(2pt)
+  #text(size: 7.5pt, fill: rgb("#CBD5E1"))[
+    #site.address.street, #site.address.city, #site.address.region #site.address.postalCode, #site.address.country
+  ]
+]
+
+// ── Type & layout helpers ────────────────────────────────────────────────────
+
+#let split-title(navy-part, red-part) = block(below: 0.7em)[
+  #text(size: 24pt, weight: 900, fill: navy)[#navy-part]
+  #text(size: 24pt, weight: 900, fill: red)[ #red-part]
+]
+
+#let eyebrow(label) = text(
+  size: 8pt, weight: "bold", tracking: 2pt, fill: red-dark,
+)[#upper(label)]
+
+#let intro(body) = block(
+  below: 1em,
+  text(size: 10.5pt, fill: muted)[#body],
+)
+
+// Pillar: small circular badge + title + body. Used in 4/5-up icon rows.
+#let pillar(glyph, title, body) = align(center)[
+  #box(
+    width: 36pt, height: 36pt,
+    fill: red, radius: 50%,
+    inset: 0pt,
+  )[
+    #align(center + horizon)[
+      #text(size: 16pt, fill: white, weight: 900)[#glyph]
+    ]
+  ]
+  #v(0.4em)
+  #text(size: 9pt, weight: 900, fill: navy)[#upper(title)]
+  #v(0.1em)
+  #text(size: 8pt, fill: muted)[#body]
+]
+
+// Value card with a coloured accent rail on the left.
+#let value-card(title, body, accent: navy) = block(
+  fill: surface,
+  stroke: (left: 3pt + accent, rest: 0.5pt + line-color),
+  inset: (x: 12pt, y: 10pt),
+  radius: 4pt,
+  width: 100%,
+)[
+  #text(size: 10pt, weight: 900, fill: accent)[#upper(title)]
+  #v(0.2em)
+  #text(size: 9pt, fill: ink)[#body]
+]
+
+// Numbered pennant card (used on Why-Choose-Us / Competitive Advantages).
+#let numbered-card(num, title, body, accent: navy) = block(
+  fill: surface,
+  stroke: 0.5pt + line-color,
+  inset: (x: 12pt, y: 10pt),
+  radius: 4pt,
+  width: 100%,
+)[
+  #grid(
+    columns: (auto, 1fr),
+    gutter: 10pt,
+    align: (top, top),
+    box(
+      fill: accent, inset: (x: 6pt, y: 3pt), radius: 3pt,
+    )[
+      #text(size: 11pt, weight: 900, fill: white)[#num]
+    ],
+    [
+      #text(size: 10pt, weight: 900, fill: red-dark)[#upper(title)]
+      #v(0.2em)
+      #text(size: 9pt, fill: ink)[#body]
+    ],
+  )
+]
+
+// Red pull-quote band (full width).
+#let quote-band(body) = block(
+  fill: red, width: 100%,
+  inset: (x: 18pt, y: 14pt),
+  radius: 4pt,
+)[
+  #align(center)[
+    #text(size: 12pt, weight: "bold", style: "italic", fill: white)[
+      " #body "
+    ]
+  ]
+]
+
+// Navy pull-quote band (alternate accent).
+#let navy-quote(body) = block(
+  fill: navy, width: 100%,
+  inset: (x: 18pt, y: 14pt),
+  radius: 4pt,
+)[
+  #align(center)[
+    #text(size: 12pt, weight: "bold", style: "italic", fill: white)[
+      " #body "
+    ]
+  ]
+]
+
+// Checklist with red ticks. `items` is an array of strings or content.
+#let checklist(items) = {
+  for item in items {
+    grid(
+      columns: (auto, 1fr),
+      gutter: 8pt,
+      align: (top, top),
+      text(size: 10pt, fill: red, weight: 900)[✓],
+      text(size: 10pt, fill: ink)[#item],
+    )
+    v(0.25em)
+  }
+}
+
+// Card wrapper with red header strip.
+#let red-header-card(title, body) = block(
+  fill: surface,
+  stroke: 0.5pt + line-color,
+  radius: 4pt,
+  width: 100%,
+  inset: 0pt,
+)[
+  #block(fill: red, inset: (x: 12pt, y: 6pt), width: 100%)[
+    #text(size: 10pt, weight: 900, fill: white)[#upper(title)]
+  ]
+  #block(inset: 12pt)[#body]
+]
+
+// Card wrapper with navy header strip.
+#let navy-header-card(title, body) = block(
+  fill: surface,
+  stroke: 0.5pt + line-color,
+  radius: 4pt,
+  width: 100%,
+  inset: 0pt,
+)[
+  #block(fill: navy, inset: (x: 12pt, y: 6pt), width: 100%)[
+    #text(size: 10pt, weight: 900, fill: white)[#upper(title)]
+  ]
+  #block(inset: 12pt)[#body]
+]
+
+// Two-column layout helper.
+#let two-col(left, right, ratio: (1fr, 1fr), gutter: 14pt) = grid(
+  columns: ratio,
+  gutter: gutter,
+  align: (top, top),
+  left, right,
+)
+
+// ── Document setup ───────────────────────────────────────────────────────────
+
+#let conf(doc) = {
+  set page(
+    paper: "a4",
+    margin: (x: 18mm, top: 18mm, bottom: 22mm),
+    fill: page-bg,
+    header: context {
+      let n = counter(page).get().first()
+      if n == 1 { none } else {
+        let padded = if n < 10 { "0" + str(n) } else { str(n) }
+        page-header(padded)
+      }
+    },
+    footer: context {
+      let n = counter(page).get().first()
+      if n == 1 { none } else { page-footer() }
+    },
+    header-ascent: 12pt,
+    footer-descent: 8pt,
+  )
+  set text(font: ("Inter", "Helvetica", "Arial"), size: 10.5pt, fill: ink)
+  set par(justify: false, leading: 0.6em)
+  show heading.where(level: 1): it => block(below: 0.6em)[
+    #text(size: 20pt, weight: 900, fill: navy)[#it.body]
+  ]
+  show heading.where(level: 2): it => block(above: 0.8em, below: 0.3em)[
+    #text(size: 13pt, weight: 900, fill: navy)[#it.body]
+  ]
+  show heading.where(level: 3): it => block(above: 0.6em, below: 0.2em)[
+    #text(size: 10pt, weight: 900, fill: red-dark)[#upper(it.body)]
+  ]
+  doc
+}
