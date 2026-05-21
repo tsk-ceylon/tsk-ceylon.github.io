@@ -41,7 +41,7 @@ We are always ready to serve you with reliable products, professional services, 
 
 | Icon | Field | Value |
 |------|-------|-------|
-| ![Navy circle with white location-pin icon](placeholder) | **ADDRESS** | 100/H/4, Sama Mawatha,<br>Niwanthidiya, Piliyandala,<br>Sri Lanka 10300 |
+| ![Navy circle with white location-pin icon](placeholder) | **ADDRESS** | 100/H/4, Sama Mawatha,<br>Niwanthiya, Piliyandala,<br>Sri Lanka |
 | ![Navy circle with white phone-handset icon](placeholder) | **PHONE** | 077 933 2250 |
 | ![Navy circle with white envelope icon](placeholder) | **EMAIL** | tskceylonpvt@gmail.com |
 | ![Navy circle with white globe / website icon](placeholder) | **WEBSITE** | www.tskceylon.lk |
@@ -154,4 +154,4 @@ Together, let's build a safer and secure Sri Lanka.
 - ![Shield-with-flame icon](placeholder) &nbsp; **TSK CEYLON (PRIVATE) LIMITED** — *Safety Today, Secure Tomorrow*
 - ![Red phone-handset icon](placeholder) &nbsp; **077 933 2250**
 - ![Red envelope icon](placeholder) &nbsp; **tskceylonpvt@gmail.com**
-- ![Red location-pin icon](placeholder) &nbsp; **100/H/4, Sama Mawatha, Niwanthidiya, Piliyandala, Sri Lanka 10300**
+- ![Red location-pin icon](placeholder) &nbsp; **100/H/4, Sama Mawatha, Niwanthiya, Piliyandala, Sri Lanka**

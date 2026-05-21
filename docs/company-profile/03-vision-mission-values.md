@@ -74,4 +74,4 @@ To provide high-quality fire safety equipment and dependable customer service at
 
 - ![Red phone-handset icon](placeholder) &nbsp; **077 933 2250**
 - ![Red envelope icon](placeholder) &nbsp; **tskceylonpvt@gmail.com**
-- ![Red location-pin icon](placeholder) &nbsp; **100/H/4, Sama Mawatha, Niwanthidiya, Piliyandala, Sri Lanka 10300**
+- ![Red location-pin icon](placeholder) &nbsp; **100/H/4, Sama Mawatha, Niwanthiya, Piliyandala, Sri Lanka**

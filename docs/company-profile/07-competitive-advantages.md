@@ -104,4 +104,4 @@ Every product and service we provide is focused on improving safety standards an
 - ![Shield-with-flame icon](placeholder) &nbsp; **TSK CEYLON (PRIVATE) LIMITED** — *Safety Today, Secure Tomorrow*
 - ![Red phone-handset icon](placeholder) &nbsp; **077 933 2250**
 - ![Red envelope icon](placeholder) &nbsp; **tskceylonpvt@gmail.com**
-- ![Red location-pin icon](placeholder) &nbsp; **100/H/4, Sama Mawatha, Niwanthidiya, Piliyandala, Sri Lanka 10300**
+- ![Red location-pin icon](placeholder) &nbsp; **100/H/4, Sama Mawatha, Niwanthiya, Piliyandala, Sri Lanka**

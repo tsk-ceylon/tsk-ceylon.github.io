@@ -1,29 +1,28 @@
 import type { SiteConfig } from './types';
 
-// ─── PLACEHOLDERS — replace each marked value with TSK Ceylon's real details ───
 export const site: SiteConfig = {
   name: 'TSK Ceylon',
-  legalName: 'TSK Ceylon (Pvt) Ltd', // PLACEHOLDER — legal entity name
+  legalName: 'TSK CEYLON (PVT) LTD',
   tagline: 'Certified Fire Extinguishers & Servicing in Sri Lanka',
   description:
     'TSK Ceylon supplies, installs and services certified fire extinguishers for offices, factories, hotels and homes across Sri Lanka. Request a quote today.',
   url: 'https://tskceylon.github.io',
-  phoneDisplay: '+94 11 234 5678',          // PLACEHOLDER — real phone
-  phoneHref: '+94112345678',                // PLACEHOLDER — tel: digits
-  whatsappNumber: '94771234567',            // PLACEHOLDER — WhatsApp digits, no +
+  phoneDisplay: '077 933 2250',
+  phoneHref: '+94779332250',
+  whatsappNumber: '94779332250',
   whatsappMessage: 'Hello TSK Ceylon, I would like a quote for fire extinguishers.',
   email: 'info@tskceylon.lk',               // PLACEHOLDER — real email
   address: {
-    street: 'No. 1, Main Street',           // PLACEHOLDER
-    city: 'Colombo',                        // PLACEHOLDER
-    region: 'Western Province',             // PLACEHOLDER
-    postalCode: '00100',                    // PLACEHOLDER
+    street: '100/H/4, Sama Mawatha, Niwanthiya',
+    city: 'Piliyandala',
+    region: 'Western Province',
+    postalCode: '',
     country: 'Sri Lanka',
   },
   geo: { lat: 6.9271, lng: 79.8612 },       // PLACEHOLDER — shop coordinates
   // PLACEHOLDER — replace with the Google Maps "Embed a map" iframe src for the real address
   mapEmbedUrl:
-    'https://www.google.com/maps?q=Colombo,Sri%20Lanka&output=embed',
+    'https://www.google.com/maps?q=100%2FH%2F4%20Sama%20Mawatha%20Niwanthiya%20Piliyandala%20Sri%20Lanka&output=embed',
   hours: [
     { days: 'Monday – Friday', hours: '8:30 AM – 5:30 PM' },
     { days: 'Saturday', hours: '9:00 AM – 1:00 PM' },

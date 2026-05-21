@@ -13,7 +13,7 @@ const year = new Date().getFullYear();
     <div class="text-sm leading-relaxed">
       <p class="text-white font-semibold mb-2">Contact</p>
       <p>{site.address.street}, {site.address.city}</p>
-      <p>{site.address.region} {site.address.postalCode}, {site.address.country}</p>
+      <p>{site.address.region}{site.address.postalCode ? ` ${site.address.postalCode}` : ''}, {site.address.country}</p>
       <p class="mt-2"><a class="hover:text-white" href={`tel:${site.phoneHref}`}>{site.phoneDisplay}</a></p>
       <p><a class="hover:text-white" href={`mailto:${site.email}`}>{site.email}</a></p>
     </div>

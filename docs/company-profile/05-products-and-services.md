@@ -137,11 +137,11 @@ We conduct fire safety training programs to educate and prepare your staff for e
 
 ## Footer
 
-> Layout: Full-width navy band; the address on this page differs from the rest of the brochure — captured verbatim.
+> Layout: Full-width navy band.
 
 - ![Shield-with-flame icon](placeholder) &nbsp; **TSK CEYLON (PRIVATE) LIMITED** — *Safety Today, Secure Tomorrow*
 - ![Red phone-handset icon](placeholder) &nbsp; **077 933 2250**
 - ![Red envelope icon](placeholder) &nbsp; **tskceylonpvt@gmail.com**
-- ![Red location-pin icon](placeholder) &nbsp; **100/H/4, Sama Mawatha, Niwanthidiya, Piliyandala, Panadura 10300**
+- ![Red location-pin icon](placeholder) &nbsp; **100/H/4, Sama Mawatha, Niwanthiya, Piliyandala, Sri Lanka**
 
-> ⚠ Source quirk: this page's address ends with **"Panadura 10300"** while every other page in the brochure ends with **"Sri Lanka 10300"**.
+> Note: the printed brochure's page-5 footer originally read **"Panadura 10300"** while every other page read **"Sri Lanka 10300"**. Both have been reconciled to the canonical address (no postal code) as confirmed on 2026-05-21.

@@ -40,7 +40,7 @@
 
 - ![Red circular phone-handset icon](placeholder) &nbsp; **077 933 2250**
 - ![Red circular envelope/email icon](placeholder) &nbsp; **tskceylonpvt@gmail.com**
-- ![Red circular location-pin icon](placeholder) &nbsp; **100/H/4, Sama Mawatha, Niwanthidiya, Piliyandala, Sri Lanka 10300**
+- ![Red circular location-pin icon](placeholder) &nbsp; **100/H/4, Sama Mawatha, Niwanthiya, Piliyandala, Sri Lanka**
 
 ## Right Panel (photograph)
 
