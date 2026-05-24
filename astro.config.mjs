@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import sitemap, { ChangeFreqEnum } from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
-const SITE_URL = process.env.SITE_URL ?? 'https://tsk-ceylon.github.io';
+const SITE_URL = process.env.SITE_URL ?? 'https://tskceylon.com';
 const PAGES_BASE = process.env.PAGES_BASE ?? '/';
 
 const NOW = new Date();

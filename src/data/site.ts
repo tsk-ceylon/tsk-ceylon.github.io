@@ -6,7 +6,7 @@ export const site: SiteConfig = {
   tagline: 'Certified Fire Extinguishers & Servicing in Sri Lanka',
   description:
     'TSK Ceylon supplies, installs and services certified fire extinguishers for offices, factories, hotels and homes across Sri Lanka. Request a quote today.',
-  url: 'https://tsk-ceylon.github.io',
+  url: 'https://tskceylon.com',
   phoneDisplay: '077 933 2250',
   phoneHref: '+94779332250',
   whatsappNumber: '94779332250',

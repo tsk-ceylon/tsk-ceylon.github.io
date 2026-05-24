@@ -26,7 +26,7 @@ Replace every value marked `// PLACEHOLDER` with TSK Ceylon's real details, and 
 
 Pushing to `main` builds and deploys via `.github/workflows/deploy.yml`.
 
-The site publishes at **`https://tsk-ceylon.github.io/`** — repo `tsk-ceylon/tsk-ceylon.github.io`, with GitHub Pages source set to **GitHub Actions** (Settings → Pages).
+The site publishes at **`https://tskceylon.com/`** (custom domain via `public/CNAME`, Namecheap DNS → GitHub Pages IPs). Repo `tsk-ceylon/tsk-ceylon.github.io`, with GitHub Pages source set to **GitHub Actions** (Settings → Pages). The legacy `https://tsk-ceylon.github.io/` URL 301-redirects to the custom domain.
 
 ## SEO
 

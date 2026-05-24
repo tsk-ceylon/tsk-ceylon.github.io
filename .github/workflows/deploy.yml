@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: withastro/action@v3
-        # Targets the org site root (https://tsk-ceylon.github.io).
+        # Targets the org site root, served at https://tskceylon.com via public/CNAME.
   deploy:
     needs: build
     runs-on: ubuntu-latest
