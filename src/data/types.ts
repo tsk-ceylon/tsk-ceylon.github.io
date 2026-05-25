@@ -8,6 +8,7 @@ export interface SiteConfig {
   name: string;
   legalName: string;
   tagline: string;
+  slogan: string;
   description: string;
   url: string;
   phoneDisplay: string;

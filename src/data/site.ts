@@ -4,6 +4,7 @@ export const site: SiteConfig = {
   name: 'TSK Ceylon',
   legalName: 'TSK CEYLON (PVT) LTD',
   tagline: 'Certified Fire Extinguishers & Servicing in Sri Lanka',
+  slogan: 'Your Safety is Our Priority',
   description:
     'TSK Ceylon supplies, installs and services certified fire extinguishers for offices, factories, hotels and homes across Sri Lanka. Request a quote today.',
   url: 'https://tskceylon.com',

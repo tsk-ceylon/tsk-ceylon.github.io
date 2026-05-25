@@ -28,6 +28,7 @@ const site = {
   name: field(siteSrc, 'name'),
   legalName: field(siteSrc, 'legalName'),
   tagline: field(siteSrc, 'tagline'),
+  slogan: field(siteSrc, 'slogan'),
   phoneDisplay: field(siteSrc, 'phoneDisplay'),
   email: field(siteSrc, 'email'),
   url: field(siteSrc, 'url'),

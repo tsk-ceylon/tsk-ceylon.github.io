@@ -9,10 +9,11 @@
     "preview": "astro preview",
     "check": "astro check",
     "pdf": "node tools/company-profile/build.mjs",
+    "og": "node tools/generate-og/build.mjs",
     "images": "node tools/generate-images/generate.mjs",
     "smoke": "node scripts/smoke.mjs",
     "linkcheck": "linkinator dist --skip \"^(tel:|mailto:|https://wa\\.me|https://www\\.google\\.com/maps|https://tsk-ceylon\\.github\\.io)\"",
-    "verify": "npm run check && npm run build && npm run smoke && npm run linkcheck"
+    "verify": "npm run check && npm run og && npm run build && npm run smoke && npm run linkcheck"
   },
   "dependencies": {
     "astro": "^5.6.0",

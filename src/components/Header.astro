@@ -7,8 +7,14 @@ const waHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(s
 ---
 <header class="border-b border-line bg-surface sticky top-0 z-40">
   <div class="container-wrap h-16 flex items-center justify-between gap-3 sm:gap-4">
-    <a href="/" class="flex items-center" aria-label={`${site.name} — home`}>
+    <a href="/" class="flex items-center" aria-label={`${site.name} — ${site.slogan}`}>
       <Image src={logo} alt={site.name} widths={[48, 96, 144]} sizes="48px" loading="eager" fetchpriority="high" class="h-12 w-auto" />
+      <span class="hidden lg:flex items-center gap-2 ml-3 pl-3 border-l border-line text-[11px] font-bold tracking-[0.18em] uppercase">
+        <span class="h-px w-3 bg-action-dark" aria-hidden="true"></span>
+        <span class="text-ink">Your Safety is</span>
+        <span class="text-action-dark">Our Priority</span>
+        <span class="h-px w-3 bg-action-dark" aria-hidden="true"></span>
+      </span>
     </a>
 
     <nav aria-label="Primary" class="hidden md:flex items-center gap-6 text-sm font-semibold">

@@ -10,6 +10,12 @@ const year = new Date().getFullYear();
       <span class="inline-flex bg-white rounded-lg p-3">
         <Image src={logo} alt={site.name} widths={[80, 160, 240]} sizes="80px" loading="lazy" class="h-20 w-auto" />
       </span>
+      <p class="mt-4 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] uppercase">
+        <span class="h-px w-4 bg-white/40" aria-hidden="true"></span>
+        <span class="text-white">Your Safety is</span>
+        <span class="text-action-dark">Our Priority</span>
+        <span class="h-px w-4 bg-white/40" aria-hidden="true"></span>
+      </p>
       <p class="mt-3 text-sm leading-relaxed">{site.tagline}</p>
     </div>
     <div class="text-sm leading-relaxed">

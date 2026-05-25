@@ -26,6 +26,17 @@
         #upper(site.legalName)
       ]
 
+      #v(0.6em)
+      #grid(
+        columns: (auto, auto, auto, auto),
+        column-gutter: 8pt,
+        align: horizon,
+        box(width: 18pt, height: 1pt, fill: red),
+        text(size: 10pt, weight: "bold", tracking: 2pt, fill: navy)[YOUR SAFETY IS],
+        text(size: 10pt, weight: "bold", tracking: 2pt, fill: red)[OUR PRIORITY],
+        box(width: 18pt, height: 1pt, fill: red),
+      )
+
       #v(0.7em)
       #box(width: 80pt, height: 2pt, fill: red)
       #v(0.35em)
