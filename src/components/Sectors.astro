@@ -1,0 +1,21 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { sectors } from '../data/sectors';
+---
+<section class="border-y border-line bg-surface-alt">
+  <div class="container-wrap py-section-sm md:py-section">
+    <SectionHeading eyebrow="Sectors" title="Sectors we serve"
+      intro="From a single office to a full industrial site, we tailor fire safety to each environment." />
+    <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {sectors.map((s) => (
+        <div class="rounded-lg border border-line bg-surface p-5 shadow-card">
+          <h3 class="flex items-start gap-2 text-base font-extrabold text-navy">
+            <span class="mt-1.5 h-2 w-2 shrink-0 rounded-sm bg-action" aria-hidden="true"></span>
+            {s.name}
+          </h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed">{s.blurb}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

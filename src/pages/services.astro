@@ -2,15 +2,30 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import ServiceCard from '../components/ServiceCard.astro';
+import Faq from '../components/Faq.astro';
 import { services } from '../data/services';
+
+const coreServices = services.filter((s) => s.category !== 'advisory');
+const advisoryServices = services.filter((s) => s.category === 'advisory');
 ---
 <BaseLayout title="Fire Extinguisher Servicing & Refilling" path="services" pageType="services"
-  description="Fire extinguisher refilling, annual maintenance & inspection, installation and fire safety training in Sri Lanka.">
+  description="Fire extinguisher refilling, maintenance & inspection, installation, training, consultation and fire-system design across Sri Lanka.">
   <section class="container-wrap py-section-sm md:py-section">
     <SectionHeading as="h1" eyebrow="Services" title="Keeping you safe & compliant"
-      intro="Extinguishers need servicing to stay effective and to keep your premises audit-ready." />
+      intro="Extinguishers only protect you if they're maintained. We keep yours serviced, tagged and ready for inspection." />
     <div class="mt-8 grid gap-6 md:grid-cols-2">
-      {services.map((service) => <ServiceCard service={service} />)}
+      {coreServices.map((service) => <ServiceCard service={service} />)}
     </div>
+
+    {advisoryServices.length > 0 && (
+      <div class="mt-14">
+        <h2 class="text-xl font-extrabold text-navy">Advisory &amp; design</h2>
+        <p class="mt-2 max-w-2xl text-muted">Planning a new fit-out, or not sure where to start? We help before the first extinguisher goes on the wall.</p>
+        <div class="mt-6 grid gap-6 md:grid-cols-2">
+          {advisoryServices.map((service) => <ServiceCard service={service} />)}
+        </div>
+      </div>
+    )}
   </section>
+  <Faq />
 </BaseLayout>

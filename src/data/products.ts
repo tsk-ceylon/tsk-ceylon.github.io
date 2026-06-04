@@ -1,4 +1,4 @@
-import type { Product } from './types';
+import type { Product, Accessories } from './types';
 
 export const products: Product[] = [
   {
@@ -52,3 +52,16 @@ export const products: Product[] = [
       'Purpose-built for deep-fat fryer and cooking-oil fires in commercial kitchens.',
   },
 ];
+
+/** Beyond extinguishers — the rest of what a compliant workplace needs. */
+export const accessories: Accessories = {
+  title: 'Safety equipment & accessories',
+  intro: 'Beyond extinguishers, we supply the rest of what a compliant workplace needs.',
+  items: [
+    'Safety signs & warning boards',
+    'Fire-safety stickers',
+    'Emergency safety accessories',
+    'Industrial safety products',
+  ],
+  note: 'All matched to your environment and safety requirements.',
+};

@@ -2,15 +2,26 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import ProductCard from '../components/ProductCard.astro';
-import { products } from '../data/products';
+import { products, accessories } from '../data/products';
 ---
 <BaseLayout title="Fire Extinguishers in Sri Lanka" path="products" pageType="products"
-  description="Dry powder, CO₂, foam, water and wet chemical fire extinguishers supplied across Sri Lanka by TSK Ceylon.">
+  description="Dry powder, CO₂, foam, water and wet chemical fire extinguishers supplied across Sri Lanka by TSK Ceylon — plus safety signage and accessories.">
   <section class="container-wrap py-section-sm md:py-section">
     <SectionHeading as="h1" eyebrow="Products" title="Our fire extinguisher range"
       intro="Not sure which you need? Send us your premises details and we’ll recommend the right mix." />
     <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {products.map((product) => <ProductCard product={product} />)}
+    </div>
+
+    <div class="mt-14 rounded-xl border border-line bg-surface-alt p-6 md:p-8 shadow-card">
+      <h2 class="text-xl font-extrabold text-navy">{accessories.title}</h2>
+      <p class="mt-2 max-w-2xl text-muted">{accessories.intro}</p>
+      <ul class="mt-4 grid gap-2 sm:grid-cols-2">
+        {accessories.items.map((item) => (
+          <li class="flex gap-2 text-sm text-ink"><span class="text-action-dark" aria-hidden="true">✓</span>{item}</li>
+        ))}
+      </ul>
+      <p class="mt-4 text-sm italic text-muted">{accessories.note}</p>
     </div>
   </section>
 </BaseLayout>

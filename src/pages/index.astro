@@ -5,8 +5,12 @@ import TrustStrip from '../components/TrustStrip.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import ProductCard from '../components/ProductCard.astro';
 import ServiceCard from '../components/ServiceCard.astro';
+import Sectors from '../components/Sectors.astro';
 import { products } from '../data/products';
 import { services } from '../data/services';
+
+// Home showcases the image-backed core services; advisory services live on /services.
+const coreServices = services.filter((s) => s.category !== 'advisory');
 ---
 <BaseLayout title="Home" path="" pageType="home">
   <Hero />
@@ -24,7 +28,7 @@ import { services } from '../data/services';
       <SectionHeading eyebrow="Services" title="More than just sales"
         intro="We keep your extinguishers ready and your premises compliant year-round." />
       <div class="mt-8 grid gap-6 md:grid-cols-2">
-        {services.map((service) => <ServiceCard service={service} />)}
+        {coreServices.map((service) => <ServiceCard service={service} />)}
       </div>
     </div>
   </section>
@@ -60,4 +64,5 @@ import { services } from '../data/services';
       </div>
     </div>
   </section>
+  <Sectors />
 </BaseLayout>

@@ -42,4 +42,17 @@ export interface Service {
   name: string;
   description: string;
   points: string[];
+  category?: 'core' | 'advisory';   // 'core' services have artwork; 'advisory' render as text cards
 }
+
+/** A named company value or selling point: short title + one-line blurb. */
+export interface Value { title: string; blurb: string; }
+
+/** An industry/sector the company serves. */
+export interface Sector { name: string; blurb: string; }
+
+/** A frequently-asked question and its answer (plain text; rendered as HTML-safe string). */
+export interface Faq { q: string; a: string; }
+
+/** Non-extinguisher safety products, shown as a single grouped card. */
+export interface Accessories { title: string; intro: string; items: string[]; note: string; }

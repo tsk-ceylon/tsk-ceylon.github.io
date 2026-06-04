@@ -2,6 +2,7 @@
 import { site } from '../data/site';
 import { products } from '../data/products';
 import { services } from '../data/services';
+import { faqs } from '../data/faq';
 import type { PageType } from '../data/types';
 
 interface Props { title: string; description?: string; path?: string; pageType?: PageType; }
@@ -114,12 +115,26 @@ const serviceList =
       }
     : null;
 
+const faqPage =
+  pageType === 'services'
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      }
+    : null;
+
 const jsonLdBlocks: object[] = [];
 if (pageType === 'home' || pageType === 'contact') jsonLdBlocks.push(localBusiness);
 if (pageType === 'about') jsonLdBlocks.push(organization);
 if (breadcrumb) jsonLdBlocks.push(breadcrumb);
 if (productList) jsonLdBlocks.push(productList);
 if (serviceList) jsonLdBlocks.push(serviceList);
+if (faqPage) jsonLdBlocks.push(faqPage);
 ---
 <title>{fullTitle}</title>
 <meta name="description" content={description} />

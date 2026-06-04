@@ -1,0 +1,27 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { faqs } from '../data/faq';
+---
+<section id="faq" class="border-t border-line scroll-mt-24">
+  <div class="container-wrap py-section-sm md:py-section">
+    <SectionHeading eyebrow="FAQ" title="Frequently asked questions"
+      intro="Quick answers to what customers ask most. Need something specific? Just ask." />
+    <div class="mx-auto mt-8 max-w-3xl divide-y divide-line rounded-xl border border-line bg-surface shadow-card">
+      {faqs.map((f) => (
+        <details class="group">
+          <summary class="flex cursor-pointer items-center justify-between gap-4 p-5 font-bold text-navy marker:content-none">
+            {f.q}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="h-5 w-5 shrink-0 text-action-dark transition-transform group-open:rotate-180" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </summary>
+          <p class="px-5 pb-5 text-sm text-muted leading-relaxed">{f.a}</p>
+        </details>
+      ))}
+    </div>
+    <div class="mx-auto mt-6 max-w-3xl text-sm text-muted">
+      Still unsure which extinguishers you need?
+      <a href="/contact" class="font-bold text-action-dark border-b-2 border-action-dark">Get a quote →</a>
+    </div>
+  </div>
+</section>
