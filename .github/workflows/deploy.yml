@@ -18,12 +18,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      # Temporarily taken down at the owner's request: publish the holding page in
-      # maintenance/ instead of the Astro build. Revert this commit to restore the site.
+      # Taken down at the owner's request: publish an empty site, so every URL
+      # returns a 404 and search engines drop the pages. The site code is untouched;
+      # revert this commit and 5da1643 to restore it.
+      - run: mkdir empty
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: maintenance
+          path: empty
   deploy:
     needs: build
     runs-on: ubuntu-latest
